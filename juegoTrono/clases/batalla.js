@@ -1,3 +1,5 @@
+import { Guerrero } from "./personajesEspeciales/guerrero";
+
 export class Batalla{
     #guerreroMuertos;
 
@@ -6,8 +8,8 @@ export class Batalla{
     }
     
     iniciarBatalla(casaA,casaB){
-        let guerreroCasaA=casaA.getMiembros();
-        let guerreroCasaB=casaB.getMiembros();
+        let guerreroCasaA=casaA.getMiembros().filter(guerrero => guerrero instanceof Guerrero);
+        let guerreroCasaB=casaB.getMiembros().filter(guerrero => guerrero instanceof Guerrero);
         let turno=1;
         console.log("La batalla entre la casa "+casaA.getNombreCasa()+" y la casa "+casaB.getNombreCasa()+" ha comenzado!");
         let maxsimoTurnos=1000; //Para evitar bucles infinitos
@@ -18,7 +20,9 @@ export class Batalla{
             console.log("Turno "+turno+": "+guerreroA.getNombrePersonaje()+" | "+guerreroB.getNombrePersonaje());
             //Guerrero A ataca a guerrero B
             while(guerreroA.getVida()>0 && guerreroB.getVida()>0){
-                guerreroA.atacar(guerreroB);
+                if(guerreroA.getVida()>0){
+                    guerreroA.atacar(guerreroB);
+                }
                 if(guerreroB.getVida()>0){
                     guerreroB.atacar(guerreroA);
                 }
