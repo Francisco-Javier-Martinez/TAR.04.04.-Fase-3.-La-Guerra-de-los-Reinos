@@ -1,4 +1,4 @@
-import { Guerrero } from "./personajesEspeciales/guerrero";
+import { Guerrero } from "./personajesEspeciales/guerrero.js";
 
 export class Batalla{
     #guerreroMuertos;
@@ -59,3 +59,4 @@ export class Batalla{
         });
     }
 }
+
