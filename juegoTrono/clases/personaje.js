@@ -9,7 +9,7 @@ export class Personaje{
     constructor(nombre, edad, live, casa){
         this.#nombrePersonaje=nombre || "";
         this.#edad =edad ||0;
-        this.#live = live || true;
+        this.#live = (typeof live === 'boolean') ? live : true;
         if (!(casa instanceof Casa)) {
             console.log("Advertencia: Se intentó asignar un valor que no es una instancia de Casa.");
             this.#casaPerteneciente = null;
