@@ -40,7 +40,7 @@ export class Personaje{
         this.#arma=arm;
     } */
     presentarse(){
-        let nombreCasa=this.#casaPerteneciente.getNombreCasa();
+        let nombreCasa=this.#casaPerteneciente.nombreCasa;
         console.log("Soy "+this.#nombrePersonaje+" y pertenezco a la casa: "+nombreCasa);
     }
 
@@ -51,15 +51,15 @@ export class Personaje{
 
 
     // Getters
-    getNombrePersonaje(){
+    get nombrePersonaje(){
         return this.#nombrePersonaje;
     }
 
-    getVido(){
+    get vivo(){
         return this.#live;
     }
 
-    getEdad(){
+    get edad(){
         return this.#edad;
     }
 
@@ -67,7 +67,7 @@ export class Personaje{
         return this.#live;
     }
 
-    getCasaPerteneciente(){
+    get casaPerteneciente(){
         return this.#casaPerteneciente;
     }
 

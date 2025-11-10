@@ -16,10 +16,10 @@ export class Rey extends Personaje{
     }
 
     gobernar(){
-        console.log(this.getNombrePersonaje()+" gobierna con sabiduria desde hace "+this.#anoReinados);
+        console.log(this.nombrePersonaje+" gobierna con sabiduria desde hace "+this.#anoReinados);
     }
 
-    getRey(){
+    get anosReinado(){
         return this.#anoReinados;
     }
 

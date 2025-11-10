@@ -29,7 +29,6 @@ const cersei = new Guerrero("Cersei Lannister", 34, true, casaLannister, lanzaDe
 const tyrion = new Guerrero("Tyrion Lannister", 30, true, casaLannister, ballesta);
 const gregor = new Guerrero("Gregor Clegane", 38, true, casaLannister, hacha);
 
-// METER PERSONAJES
 casaStark.meterMiembro(jon);
 casaStark.meterMiembro(arya);
 casaStark.meterMiembro(robb);
@@ -53,4 +52,3 @@ batalla.iniciarBatalla(casaStark,casaLannister);
 batalla.monstrarGuerrerosMuertos(); 
 
 console.log("Se acabo la pelea");
-
